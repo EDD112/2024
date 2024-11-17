@@ -41,12 +41,13 @@ body::before {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-.header h1 {
-    font-size: 1.5rem;
+.educational-note {
+    font-size: 1.30rem;
+    font-weight: bold;
     color: rgba(255, 99, 133, 1);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
-
 .content h2 {
     font-size: 1.25rem;
     font-weight: bold;
