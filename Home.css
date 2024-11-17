@@ -22,12 +22,16 @@ nav {
     z-index: 10;
     opacity: 0;
     animation: fadeIn 1s forwards;
+    padding: 10px 20px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 35px;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    width: 100%;
 }
 
 nav ul li {
@@ -98,7 +102,7 @@ nav ul li a:hover {
 .hero-video {
     width: 75%;
     border-radius: 25px;
-    height: -1000000px; 
+    height: -1000000px;
 }
 
 .cta-btn {
@@ -154,19 +158,43 @@ footer::before {
 
 .footer-logo p {
     color: white;
-    font-size: 1rem; 
+    font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 20px;  
+    margin-bottom: 20px;
 }
 
-.footer-office,
+.footer-office {
+    text-align: left;
+    margin: 0 50px;
+}
+
+.footer-office h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-office p {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.footer-office a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-office a:hover {
+    color: #ff4081;
+}
+
 .footer-links,
 .footer-newsletter {
     text-align: left;
     margin: 0 50px;
 }
 
-.footer-office h3,
 .footer-links h3,
 .footer-newsletter h3 {
     font-size: 1.2rem;
@@ -271,8 +299,9 @@ footer::before {
 
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: row-reverse;
+        gap: 10px;
+        justify-content: flex-start;
     }
 
     .footer-container {
@@ -284,24 +313,4 @@ footer::before {
     .footer-logo, .footer-office, .footer-links, .footer-newsletter {
         margin: 20px 0;
     }
-}
-.footer-office {
-    text-align: left;
-    margin: 0 50px;  
-}
-
-.footer-office p {
-    color: white;
-    font-size: 1rem;  
-    margin-bottom: 15px;  
-    line-height: 1.6;  
-}
-
-.footer-office a {
-    text-decoration: none;
-    color: white;
-}
-
-.footer-office a:hover {
-    color: #ff4081;  
 }
