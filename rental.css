@@ -26,7 +26,8 @@ body {
     right: 20px;
     transition: background-color 0.3s ease, transform 0.2s ease;
     text-decoration: none;
-    opacity: 0; 
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
 }
 
 .return-button:hover {
@@ -36,6 +37,15 @@ body {
 
 .return-button:active {
     transform: scale(0.95);
+}
+
+@media screen and (max-width: 768px) {
+    .return-button {
+        font-size: 1rem;
+        padding: 8px 16px; 
+        top: 5px;
+        right: 5px;
+    }
 }
 
 .profile {
@@ -194,4 +204,48 @@ body {
 .plan ul {
     margin-left: 20px;
     font-size: 1rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .profile h1 {
+        font-size: 2rem;
+    }
+
+    .profile img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .return-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .nav-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .rent-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .rental-plans,
+    .booking-process {
+        padding: 10px;
+    }
+
+    .plan ul {
+        font-size: 0.9rem;
+    }
 }
